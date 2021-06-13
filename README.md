@@ -12,7 +12,7 @@
 [![Stack Overflow][stackoverflow-shield]][stackoverflow.com/users/11175375/adam]
 [![Leetcode][leetcode-shield]][eetcode.com/Hard_Code/]
 -->
-## Basic opencv image manipulation
+## Image and Video Processing in Opencv
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -64,7 +64,8 @@ Read, show, clone image in opencv
 * [opencv](https://opencv.org/)
 * [cmake](https://cmake.org/)
 * [gnu](https://www.gnu.org/)
-
+* [protocol buffers](https://developers.google.com/protocol-buffers)
+* [conan](https://conan.io/)
 <br>
 
 ## File Structure
@@ -81,14 +82,22 @@ Read, show, clone image in opencv
 ```
 .
 ├── CMakeLists.txt
+├── conanfile.txt
 ├── include
 ├── README.md
 ├── ressource
-│   └── happy.jpeg
+│   ├── image
+│   │   └── lena.jpg
+│   └── video
+│       └── video_1.mp4
 └── src
-    └── imageBasics.cpp
+    ├── main.cpp
+    ├── README.md
+    ├── sample1.cpp
+    ├── sample2.cpp
+    └── sample3.cpp
 
-
+5 directories, 10 files
 
 ```
 
@@ -96,7 +105,7 @@ Read, show, clone image in opencv
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is a sample code of how you may use  the opencv basic libs.
+This is a sample code of how you may use  the opencv for processing image and video, and storing opencv matrix into xml file.
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
@@ -185,17 +194,17 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/zoumson/Image.git
+   git clone https://github.com/zoumson/ImageVideoXML.git
    ```
 2. Go to the project directory source
    ```sh
-   cd Image
+   cd ImageVideoXML
    ```
-3. Create empty directories `build`, and `bin`
+3. Create empty directories `build`, `result`, and `bin`
    ```sh
-   mkdir build &&  mkdir bin 
+   mkdir build &&  mkdir bin &&  mkdir result 
    ```
-5. Generate the exectutable `imageBasics` and move it to `bin`
+5. Generate the exectutables and move them to `bin`
    ```sh
    cd build && cmake .. && make -j4 && cd ..
    ```
@@ -213,7 +222,7 @@ This is an example of how to list things you need to use the software and how to
 
 4. Back to the initial file structure configuration
    ```sh
-   rm -r bin build 
+   rm -r bin build  result 
    ```
 <!-- ROADMAP -->
 ## Roadmap
@@ -245,7 +254,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Adama Zouma - <!-- [@your_twitter](https://twitter.com/your_username) -->- stargue49@gmail.com
 
-Project Link: [https://github.com/zoumson/Image](https://github.com/zoumson/Image.git)
+Project Link: [https://github.com/zoumson/ImageVideoXML](https://github.com/zoumson/ImageVideoXML.git)
 
 
 
